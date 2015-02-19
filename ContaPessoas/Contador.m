@@ -39,6 +39,15 @@
     return girl;
 }
 
+static Contador *contador = nil;
+
++ (Contador *) contador {
+    
+    if (contador == nil) {
+        contador = [[Contador alloc]init];
+    }
+    return contador;
+}
 
 
 @end
