@@ -14,6 +14,6 @@
 
 -(int)getBoys;
 -(int)getGirls;
-
+-(int)getTotal;
 @end
 
