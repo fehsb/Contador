@@ -37,9 +37,11 @@
     Contador *c = [[Contador alloc] init];
     [c maisUmaGata];
     [c maisUmCueca];
+    [c maisUmCueca];
+    [c maisUmCueca];
     XCTAssert(([c getGirls] == 1), @"Pass");
-    XCTAssert(([c getBoys] == 1), @"Pass");
-    XCTAssert(([c getTotal] == 2), @"Pass");
+    XCTAssert(([c getBoys] == 3), @"Pass");
+    XCTAssert(([c getTotal] == 4), @"Pass");
 }
 
 @end
