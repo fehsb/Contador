@@ -20,13 +20,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     contador = [Contador contador];
+    contador.delegate = self;
+    [self atualiza];
 }
 
+// -(void) viewDidAppear:(BOOL)animated{
+//    [self atualiza];
+// }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)atualiza{
+    _totalBoys.text = [NSString stringWithFormat: @"%d", [contador getBoys]];
+    _totalGirls.text = [NSString stringWithFormat: @"%d", [contador getGirls]];
+    _total.text = [NSString stringWithFormat:@"%d", [contador getTotal]];
 }
 
 - (IBAction)click:(id)sender {

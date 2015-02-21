@@ -5,10 +5,10 @@
 //  Created by Vinicius Miana on 2/18/15.
 //  Copyright (c) 2015 Vinicius Miana. All rights reserved.
 //
-
+#import "Contador.h"
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface SecondViewController : UIViewController <Mostrador>
 
 @property (weak, nonatomic) IBOutlet UILabel *totalBoys;
 @property (weak, nonatomic) IBOutlet UILabel *totalGirls;
